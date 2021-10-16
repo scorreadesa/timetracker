@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TimeTrackerController.CalendarController"
+            prefHeight="600" prefWidth="900">
+    <left>
+        <VBox alignment="CENTER" spacing="15" fx:id="leftControlPane_" maxWidth="200">
+            <padding>
+                <Insets left="15" right="15"/>
+            </padding>
+            <Button text="Calendar" maxWidth="Infinity" />
+            <Button text="Add Activity" maxWidth="Infinity" onAction="#handleAddActivityButton"/>
+            <Button text="Statistics" maxWidth="Infinity" onAction="#handleShowStatisticsViewButton"/>
+        </VBox>
+    </left>
+    <top>
+        <GridPane alignment="CENTER" fx:id="upperControlPane_" hgap="15">
+            <padding>
+                <Insets top="15" bottom="15"/>
+            </padding>
+            <Button text="&lt;&lt;" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#handleRewindYearButton"/>
+            <Button text="&lt;" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#handleRewindMonthButton"/>
+            <Label text="" GridPane.rowIndex="0" GridPane.columnIndex="5" fx:id="today_"/>
+            <Button text="&gt;" GridPane.rowIndex="0" GridPane.columnIndex="8" onAction="#handleForwardMonthButton"/>
+            <Button text="&gt;&gt;" GridPane.rowIndex="0" GridPane.columnIndex="9" onAction="#handleForwardYearButton"/>
+        </GridPane>
+    </top>
+    <center>
+        <GridPane fx:id="calendarArea_" hgap="1" vgap="1">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="14.3" halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="10" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+                <RowConstraints percentHeight="15" valignment="CENTER"/>
+            </rowConstraints>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <Label text="Monday"/>
+            </StackPane>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="1">
+                <Label text="Tuesday"/>
+            </StackPane>
+            <StackPane  GridPane.rowIndex="0" GridPane.columnIndex="2">
+                <Label text="Wednesday"/>
+            </StackPane>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="3">
+                <Label text="Thursday"/>
+            </StackPane>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="4">
+                <Label text="Friday"/>
+            </StackPane>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="5">
+                <Label text="Saturday"/>
+            </StackPane>
+            <StackPane GridPane.rowIndex="0" GridPane.columnIndex="6">
+                <Label text="Sunday"/>
+            </StackPane>
+        </GridPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TimeTrackerController.AddTimeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <GridPane fx:id="upperControlPane_" hgap="15">
+            <padding>
+                <Insets top="15" bottom="15"/>
+            </padding>
+            <Label text="" GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER" fx:id="today_"/>
+        </GridPane>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" hgap="10" vgap="10" fx:id="addTimeView_">
+            <padding><Insets top="25" bottom="25" right="25" left="25"/></padding>
+            <children>
+                <!-- Activity chombo box -->
+                <Label text="Activity" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2" maxWidth="Infinity" fx:id="activityInputField_"/>
+                <!-- Start time combo boxes (hours, minutes) -->
+                <Label text="Start" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity" fx:id="startHoursField_">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="00"/>
+                            <String fx:value="01"/>
+                            <String fx:value="02"/>
+                            <String fx:value="03"/>
+                            <String fx:value="04"/>
+                            <String fx:value="05"/>
+                            <String fx:value="06"/>
+                            <String fx:value="07"/>
+                            <String fx:value="08"/>
+                            <String fx:value="09"/>
+                            <String fx:value="10"/>
+                            <String fx:value="11"/>
+                            <String fx:value="12"/>
+                            <String fx:value="13"/>
+                            <String fx:value="14"/>
+                            <String fx:value="15"/>
+                            <String fx:value="16"/>
+                            <String fx:value="17"/>
+                            <String fx:value="18"/>
+                            <String fx:value="19"/>
+                            <String fx:value="20"/>
+                            <String fx:value="21"/>
+                            <String fx:value="22"/>
+                            <String fx:value="23"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox GridPane.columnIndex="2" GridPane.rowIndex="1" maxWidth="Infinity" fx:id="startMinutesField_">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="00"/>
+                            <String fx:value="01"/>
+                            <String fx:value="02"/>
+                            <String fx:value="03"/>
+                            <String fx:value="04"/>
+                            <String fx:value="05"/>
+                            <String fx:value="06"/>
+                            <String fx:value="07"/>
+                            <String fx:value="08"/>
+                            <String fx:value="09"/>
+                            <String fx:value="10"/>
+                            <String fx:value="11"/>
+                            <String fx:value="12"/>
+                            <String fx:value="13"/>
+                            <String fx:value="14"/>
+                            <String fx:value="15"/>
+                            <String fx:value="16"/>
+                            <String fx:value="17"/>
+                            <String fx:value="18"/>
+                            <String fx:value="19"/>
+                            <String fx:value="20"/>
+                            <String fx:value="21"/>
+                            <String fx:value="22"/>
+                            <String fx:value="23"/>
+                            <String fx:value="24"/>
+                            <String fx:value="25"/>
+                            <String fx:value="26"/>
+                            <String fx:value="27"/>
+                            <String fx:value="28"/>
+                            <String fx:value="29"/>
+                            <String fx:value="30"/>
+                            <String fx:value="31"/>
+                            <String fx:value="32"/>
+                            <String fx:value="33"/>
+                            <String fx:value="34"/>
+                            <String fx:value="35"/>
+                            <String fx:value="36"/>
+                            <String fx:value="37"/>
+                            <String fx:value="38"/>
+                            <String fx:value="39"/>
+                            <String fx:value="40"/>
+                            <String fx:value="41"/>
+                            <String fx:value="42"/>
+                            <String fx:value="43"/>
+                            <String fx:value="44"/>
+                            <String fx:value="45"/>
+                            <String fx:value="46"/>
+                            <String fx:value="47"/>
+                            <String fx:value="48"/>
+                            <String fx:value="49"/>
+                            <String fx:value="50"/>
+                            <String fx:value="51"/>
+                            <String fx:value="52"/>
+                            <String fx:value="53"/>
+                            <String fx:value="54"/>
+                            <String fx:value="55"/>
+                            <String fx:value="56"/>
+                            <String fx:value="57"/>
+                            <String fx:value="58"/>
+                            <String fx:value="59"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <!-- End time combo boxes (hours, minutes) -->
+                <Label text="End" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity" fx:id="endHoursField_">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="00"/>
+                            <String fx:value="01"/>
+                            <String fx:value="02"/>
+                            <String fx:value="03"/>
+                            <String fx:value="04"/>
+                            <String fx:value="05"/>
+                            <String fx:value="06"/>
+                            <String fx:value="07"/>
+                            <String fx:value="08"/>
+                            <String fx:value="09"/>
+                            <String fx:value="10"/>
+                            <String fx:value="11"/>
+                            <String fx:value="12"/>
+                            <String fx:value="13"/>
+                            <String fx:value="14"/>
+                            <String fx:value="15"/>
+                            <String fx:value="16"/>
+                            <String fx:value="17"/>
+                            <String fx:value="18"/>
+                            <String fx:value="19"/>
+                            <String fx:value="20"/>
+                            <String fx:value="21"/>
+                            <String fx:value="22"/>
+                            <String fx:value="23"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox GridPane.columnIndex="2" GridPane.rowIndex="2" maxWidth="Infinity" fx:id="endMinutesField_">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="00"/>
+                            <String fx:value="01"/>
+                            <String fx:value="02"/>
+                            <String fx:value="03"/>
+                            <String fx:value="04"/>
+                            <String fx:value="05"/>
+                            <String fx:value="06"/>
+                            <String fx:value="07"/>
+                            <String fx:value="08"/>
+                            <String fx:value="09"/>
+                            <String fx:value="10"/>
+                            <String fx:value="11"/>
+                            <String fx:value="12"/>
+                            <String fx:value="13"/>
+                            <String fx:value="14"/>
+                            <String fx:value="15"/>
+                            <String fx:value="16"/>
+                            <String fx:value="17"/>
+                            <String fx:value="18"/>
+                            <String fx:value="19"/>
+                            <String fx:value="20"/>
+                            <String fx:value="21"/>
+                            <String fx:value="22"/>
+                            <String fx:value="23"/>
+                            <String fx:value="24"/>
+                            <String fx:value="25"/>
+                            <String fx:value="26"/>
+                            <String fx:value="27"/>
+                            <String fx:value="28"/>
+                            <String fx:value="29"/>
+                            <String fx:value="30"/>
+                            <String fx:value="31"/>
+                            <String fx:value="32"/>
+                            <String fx:value="33"/>
+                            <String fx:value="34"/>
+                            <String fx:value="35"/>
+                            <String fx:value="36"/>
+                            <String fx:value="37"/>
+                            <String fx:value="38"/>
+                            <String fx:value="39"/>
+                            <String fx:value="40"/>
+                            <String fx:value="41"/>
+                            <String fx:value="42"/>
+                            <String fx:value="43"/>
+                            <String fx:value="44"/>
+                            <String fx:value="45"/>
+                            <String fx:value="46"/>
+                            <String fx:value="47"/>
+                            <String fx:value="48"/>
+                            <String fx:value="49"/>
+                            <String fx:value="50"/>
+                            <String fx:value="51"/>
+                            <String fx:value="52"/>
+                            <String fx:value="53"/>
+                            <String fx:value="54"/>
+                            <String fx:value="55"/>
+                            <String fx:value="56"/>
+                            <String fx:value="57"/>
+                            <String fx:value="58"/>
+                            <String fx:value="59"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <!-- Submit choice -->
+                <Label text="Comment" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField text="" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="2" maxWidth="Infinity" fx:id="commentField_"/>
+                <Button text="Add" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2" maxWidth="Infinity" onAction="#handleAddTimeEntry"/>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane >
+

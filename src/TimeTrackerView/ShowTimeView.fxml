@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TimeTrackerController.ShowTimeController"
+            prefHeight="600.0" prefWidth="900.0">
+    <left>
+        <VBox alignment="CENTER" spacing="15" fx:id="leftControlPane_" maxWidth="200">
+            <padding>
+                <Insets left="15" right="15"/>
+            </padding>
+            <Button text="Calendar" maxWidth="Infinity" onAction="#handleCalendarViewButton"/>
+            <Button text="Add Activity" maxWidth="Infinity" onAction="#handleAddActivityButton"/>
+            <Button text="Statistics" maxWidth="Infinity" onAction="#handleStatisticsViewButton"/>
+        </VBox>
+    </left>
+    <top>
+        <GridPane alignment="CENTER" fx:id="upperControlPane_" hgap="15">
+            <padding>
+                <Insets top="15" bottom="15"/>
+            </padding>
+            <Button text="&lt;&lt;" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#handleRewindYearButton"/>
+            <Button text="&lt;" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#handleRewindMonthButton"/>
+            <Label text="" GridPane.rowIndex="0" GridPane.columnIndex="5" fx:id="today_"/>
+            <Button text="&gt;" GridPane.rowIndex="0" GridPane.columnIndex="8" onAction="#handleForwardMonthButton"/>
+            <Button text="&gt;&gt;" GridPane.rowIndex="0" GridPane.columnIndex="9" onAction="#handleForwardYearButton"/>
+        </GridPane>
+    </top>
+    <center>
+        <TableView fx:id="activityDisplayPane_">
+            <columns>
+                <TableColumn text="Activity" fx:id="activityColumn_">
+
+                </TableColumn>
+                <TableColumn text="Start" fx:id="timeStartColumn_">
+
+                </TableColumn>
+                <TableColumn text="End" fx:id="timeEndColumn_">
+
+                </TableColumn>
+                <TableColumn text="Duration" fx:id="durationColumn_">
+
+                </TableColumn>
+                <TableColumn text="Comment" fx:id="commentColumn_">
+
+                </TableColumn>
+
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="TimeTrackerController.SuccessController"
+      fx:id="successView_"
+      prefHeight="300.0" prefWidth="400.0" alignment="CENTER" spacing="32">
+    <ImageView fitHeight="100" fitWidth="100" pickOnBounds="true"
+               preserveRatio="true">
+        <image>
+            <Image url="/Pictures/accepted.png" backgroundLoading="true"/>
+        </image>
+    </ImageView>
+</VBox>

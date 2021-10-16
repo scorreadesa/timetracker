@@ -1,0 +1,93 @@
+#upperControlPane_{
+    -fx-background-color: rgb(44, 44,45);
+    -fx-border-width: 2px;
+}
+
+#leftControlPane_{
+    -fx-background-color: rgb(44, 44, 45);
+    -fx-border-width: 2px;
+}
+
+#dataView_{
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(30,122,30);
+    -fx-border-width: 2px;
+    -fx-font-weight: bold;
+}
+
+#dataView_#statisticsOptions_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#calendarArea_{
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(30,122,30);
+    -fx-border-width: 2px;
+    -fx-font-weight: bold;
+}
+
+.button{
+    -fx-border-style: solid;
+    -fx-font-weight: bold;
+}
+
+#upperControlPane_ .label{
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(30,122,30);
+}
+
+#addActivityPopUp_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#timeTable_{
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(30,122,30);
+    -fx-border-width: 2px;
+}
+
+#addTimeView_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#addTimeView_ .label{
+    -fx-background-color: rgb(30,122,30);
+    -fx-font-weight: bold;
+}
+
+#activityDisplayPane_{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+#statisticsControlPane_{
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: rgb(30,122,30);
+    -fx-background-color: rgb(44,44,45);
+}
+
+.chart-bar{
+    -fx-bar-fill: darkcyan;
+}
+
+#successView_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#failureView_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#bottomControlPane_{
+    -fx-background-color: rgb(44,44,45);
+}
+
+#todoListUserInput_{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: Bahnschrift;
+}

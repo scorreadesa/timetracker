@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TimeTrackerController.StatisticsController"
+            prefHeight="600" prefWidth="900">
+    <left>
+        <VBox alignment="CENTER" spacing="15" fx:id="leftControlPane_">
+            <padding>
+                <Insets left="15" right="15"/>
+            </padding>
+            <Button text="Calendar" maxWidth="Infinity" onAction="#handleCalendarViewButton"/>
+            <Button text="Add Activity" maxWidth="Infinity" onAction="#handleAddActivityButton"/>
+            <Button text="Statistics" maxWidth="Infinity" />
+        </VBox>
+    </left>
+    <top>
+        <GridPane alignment="CENTER" fx:id="upperControlPane_" hgap="15">
+            <padding>
+                <Insets top="15" bottom="15"/>
+            </padding>
+            <Button text="&lt;&lt;" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#handleRewindYearButton"/>
+            <Button text="&lt;" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#handleRewindMonthButton"/>
+            <Label text="" GridPane.rowIndex="0" GridPane.columnIndex="5" fx:id="dateLabel_"/>
+            <Button text="&gt;" GridPane.rowIndex="0" GridPane.columnIndex="8" onAction="#handleForwardMonthButton"/>
+            <Button text="&gt;&gt;" GridPane.rowIndex="0" GridPane.columnIndex="9" onAction="#handleForwardYearButton"/>
+        </GridPane>
+    </top>
+    <center>
+        <BorderPane fx:id="dataView_">
+            <top>
+                <HBox fx:id="statisticsControlPane_" alignment="CENTER" spacing="15">
+                    <padding>
+                        <Insets bottom="5" top="5"/>
+                    </padding>
+                    <Button text="Month" onAction="#handleMonthStatisticsButton"/>
+                    <Button text="Year" onAction="#handleYearStatisticsButton"/>
+                </HBox>
+            </top>
+            <center>
+
+            </center>
+            <bottom>
+                <ScrollBar/>
+            </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>
