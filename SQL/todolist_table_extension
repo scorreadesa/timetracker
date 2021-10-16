@@ -1,0 +1,7 @@
+USE TimeTracker;
+
+create table if not exists TodoList(
+	id_todolist INT primary key not null AUTO_INCREMENT,
+	date_todo_entry Date,
+	todo_entry_data Text
+)ENGINE=InnoDB;

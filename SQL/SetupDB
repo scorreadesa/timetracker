@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS TimeTracker;
+USE TimeTracker;
+
+CREATE TABLE IF NOT EXISTS Activity(
+	id_activity INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	activity VARCHAR(64) NOT NULL,
+	UNIQUE (activity)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS TimeEntry(
+	id_te INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	activity_id INT NOT NULL,
+	start_te TIME NOT NULL,
+	end_te TIME NOT NULL,
+	total_te TIME NOT NULL,
+	comment TEXT,
+	CHECK(start_te <= end_te),
+	FOREIGN KEY (activity_id) REFERENCES Activity(id_activity)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS TimeTrackerEntry(
+	id_tte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	date_tte DATE NOT NULL,
+	time_entry_id INT NOT NULL,
+	FOREIGN KEY (time_entry_id) REFERENCES TimeEntry(id_te)
+) ENGINE = INNODB;
